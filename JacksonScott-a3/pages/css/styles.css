@@ -1,0 +1,41 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    padding-left: 10px;
+    background-color: lightgray;
+}
+
+.column {
+    font-family: "Times New Roman", Times, serif;
+    float: left;
+}
+
+.left {
+    font-family: "Times New Roman", Times, serif;
+    width: 20%;
+    padding: 20px;
+}
+
+.middle {
+    font-family: "Times New Roman", Times, serif;
+    width: 35%;
+    text-align: center;
+}
+
+.right {
+    font-family: "Times New Roman", Times, serif;
+    width: 25%;
+    padding: 20px;
+
+    
+}
+
+button {
+    font-family: "Times New Roman", Times, serif;
+    width: 140px;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+    text-align: center
+ }

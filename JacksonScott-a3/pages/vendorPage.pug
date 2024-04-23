@@ -1,0 +1,63 @@
+html
+
+    head   
+        title Vendor #{vendor.id}
+        style
+            include css/styles.css
+        script
+            include js/client.js
+    body
+        include partials/header
+        h2(id='id') #{vendor.id}
+        br
+        #main 
+            #left.column.left
+                h3 Modify store data
+                p
+                    label(for='name') Name:
+                    input(type='text' name='name' id='name' placeholder= ""+vendor.name)
+                    br
+                    br
+                    label(for='fee') Delivery fee:
+                    input(type='text' name='fee' id='fee' placeholder= ""+vendor.delivery_fee)
+                    br
+                    br
+                    label(for='min') Minimum order:
+                    input(type='text' name='min' id='min' placeholder= ""+vendor.min_order)
+
+                h3 Add new Category:
+                input(type='text' id = 'category' name='category')
+                br
+                h3 Add new Item:
+                label(for="category-select") Category: 
+                select(name="category-select" id="category-select")
+                    each val, key in vendor.supplies
+                        option(value= key) #{key}
+                br
+                label(for="iname") Item Name: 
+                input( type="text" id="iname" name="iname" placeholder="poster")
+                br
+                label( for="iprice") Item Price:
+                input( type="text" id="iprice" name="iprice" placeholder="9.99")
+                br
+                label( for="istock") Item Stock: 
+                input( type="text" id="istock" name="istock" placeholder="27")
+                button(type='button' onclick='updatePage()') Update Local Vendor
+
+            #middle.column.middle
+                each val, key in vendor.supplies
+                    h4(id = "supplies")
+                        p #{key}
+                    p(id = key)
+                        each item, id in val
+                            | Item ID : #{id}, #{item.name}, Price: $#{item.price}, Stock: #{item.stock}
+                            br
+                            | #{item.description}
+                            br
+
+            #right.column.right
+                h3 Update Server:
+                button(type='button' onclick='updateServer()') Update Server
+
+            
+

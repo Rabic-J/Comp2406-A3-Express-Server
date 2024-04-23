@@ -1,0 +1,37 @@
+html
+	head
+		title Add Vendor
+		meta(charset="UTF-8")
+		style
+			include css/styles.css
+		script
+			include js/client.js
+	body
+		include partials/header
+		div#main
+			h1 Add Vendor
+
+			label(for='name') Name:
+			input(type='text' name='name' id='name')
+			br
+			br
+			label(for='fee') Delivery fee:
+			input(type='text' name='fee' id='fee')
+			br
+			br
+			label(for='min') Minimum order:
+			input(type='text' name='min' id='min')
+			h3 Update Server:
+			button(type='button' onclick="submitVendor()") Update
+
+					
+
+
+
+
+									
+
+
+			
+			
+

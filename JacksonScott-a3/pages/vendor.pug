@@ -1,0 +1,26 @@
+html
+	head
+		title Current Vendors
+		meta(charset="UTF-8")
+		link(rel="stylesheet")
+		style
+			include css/styles.css
+	body
+		include partials/header
+		div#main
+			h1 Current Vendors
+				each v in vendors
+					br
+					a(href='http://localhost:3000/vendor/'+v.id) #{v.name}
+					
+					
+
+
+
+
+									
+
+
+			
+			
+
